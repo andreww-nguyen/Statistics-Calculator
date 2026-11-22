@@ -3,6 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="gtest/gtest.vcxproj" />
-  <Project Path="Statistics Calculator/Statistics Calculator.vcxproj" />
+  <Project Path="gtest/gtest.vcxproj" Id="d4ad4fd4-b3da-4de0-8862-f0041771e448" />
+  <Project Path="Statistics Calculator/Statistics Calculator.vcxproj" Id="79ea891c-2f5f-4f2c-a0d9-66b33ad627bc" />
 </Solution>
