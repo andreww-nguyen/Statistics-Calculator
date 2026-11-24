@@ -41,3 +41,19 @@ TEST(DatasetTests, OperatorIndex)
 	EXPECT_ANY_THROW(data[-1] = 5.0);
 }
 
+TEST(DatasetTests, QuickSort)
+{
+	Dataset data{5};
+
+	for (int i = 5; i > 0; i--)
+		data[5 - i] = static_cast<double>(i);
+
+	data.quickSort(0, 4);
+	EXPECT_DOUBLE_EQ(data[0], 1.0);
+	EXPECT_DOUBLE_EQ(data[1], 2.0);
+	EXPECT_DOUBLE_EQ(data[2], 3.0);
+	EXPECT_DOUBLE_EQ(data[3], 4.0);
+	EXPECT_DOUBLE_EQ(data[4], 5.0);
+
+
+}
