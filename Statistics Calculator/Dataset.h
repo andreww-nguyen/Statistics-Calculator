@@ -3,6 +3,7 @@
 #include "OutOfBounds.h"
 
 #include <iosfwd>
+#include <random>
 
 class Dataset
 {
@@ -14,6 +15,7 @@ public:
 
 	int size() const;
 	void insert(double val);
+	void insertRandom(int numsToAdd);
 
 	double &operator [](int index);
 	const double &operator [](int index) const;

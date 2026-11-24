@@ -12,9 +12,19 @@ TEST(DatasetTests, Constructor)
 TEST(DatasetTests, Insert)
 {
 	Dataset data;
-	data.insert(1);
-	EXPECT_EQ(data.size(), 1);
+	data.insert(3.0);
+	EXPECT_DOUBLE_EQ(data[0], 3.0);
+	data.insert(2.0);
+
+	EXPECT_DOUBLE_EQ(data[0], 2.0);
+	EXPECT_DOUBLE_EQ(data[1], 3.0);
+	data.insert(1.0);
 	EXPECT_DOUBLE_EQ(data[0], 1.0);
+	EXPECT_DOUBLE_EQ(data[1], 2.0);
+	EXPECT_DOUBLE_EQ(data[2], 3.0);
+
+	EXPECT_ANY_THROW(data[3]);
+	EXPECT_ANY_THROW(data[-1] = 5.0);
 }
 
 TEST(DatasetTests, OperatorIndex)
